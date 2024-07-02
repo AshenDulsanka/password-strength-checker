@@ -7,9 +7,29 @@ window = Tk()
 window.title("Password Strength Checker")
 window.geometry("500x400")
 
+def check_password():
+    pass
 
+def clear_box():
+    password_box.delete(0, END)
 
+lf = LabelFrame(window, text="Enter the password: ")
+lf.pack(pady=20)
 
+password_box = Entry(lf, font=("Poppins, 12"), width=25, justify=CENTER, show="*")
+password_box.pack(padx=30, pady=20)
+
+button_frame = Frame(window)
+button_frame.pack(pady=20)
+
+check_button = Button(button_frame, text="Check Password", command=check_password)
+check_button.grid(row=0, column=0, padx=10)
+
+clear_button = Button(button_frame, text="Clear Password", command=clear_box)
+clear_button.grid(row=0, column=1, padx=10)
+
+pw_box = Entry(window, text='', font=("Poppins, 12"), bd=0, bg="systembuttonface", width=60, justify=LEFT)
+pw_box.pack(pady=5)
 
 window.mainloop()
 
