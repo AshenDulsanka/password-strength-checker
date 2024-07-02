@@ -6,6 +6,7 @@ window = Tk()
 window.title("Password Strength Checker")
 window.geometry("500x400")
 window.resizable(True, True)
+window.iconbitmap("knivzz.ico")
 
 def check_password():
     global lower_label, upper_label, num_label, special_label, strength_label, remarks_label
