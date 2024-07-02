@@ -52,7 +52,7 @@ Tkinter is included with Python standard library, so no additional packages are 
     - It will also provide a strength rating and remarks based on the password's strength.
     - Click the "Clear Password" button to reset the input and check another password.
 
-### Purpose
+## Purpose
 
 This project was created for me to learn about Python and Tkinter. It serves as a learning tool to understand GUI application development and basic password strength evaluation.
 
@@ -60,6 +60,6 @@ This project was created for me to learn about Python and Tkinter. It serves as 
 
 This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.
 
-### Contributing
+## Contributing
 
 If you want to contribute to this project, feel free to open an issue or submit a pull request.
