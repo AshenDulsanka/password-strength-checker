@@ -7,14 +7,9 @@ window.title("Password Strength Checker")
 window.geometry("500x400")
 window.resizable(True, True)
 
-lower_label = Label(window)
-upper_label = Label(window)
-num_label = Label(window)
-special_label = Label(window)
-strength_label = Label(window) 
-remarks_label = Label(window)
-
 def check_password():
+    global lower_label, upper_label, num_label, special_label, strength_label, remarks_label
+
     password = password_box.get()
     strength = 0
     remarks = ''
@@ -39,7 +34,9 @@ def check_password():
     if special_count>=1:
         strength +=1
 
-    if strength == 1:
+    if strength == 0:
+        remarks = "Please enter a valid password"
+    elif strength == 1:
         remarks = "Not A Good Password!!! Change ASAP"
     elif strength ==2:
         remarks = "It's a weak password, consider changing"
@@ -66,6 +63,8 @@ def check_password():
     remarks_label = Label(window, text=f"Hint: {remarks}")
     remarks_label.pack()
 
+    check_button['state'] = DISABLED
+
 def clear_box():
     password_box.delete(0, END)
     lower_label.destroy()
@@ -74,6 +73,8 @@ def clear_box():
     special_label.destroy()
     strength_label.destroy()
     remarks_label.destroy()
+
+    check_button['state'] = NORMAL
 
 lf = LabelFrame(window, text="Enter the password: ")
 lf.pack(pady=20)
